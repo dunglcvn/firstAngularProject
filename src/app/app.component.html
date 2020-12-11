@@ -1,0 +1,5 @@
+<main>
+  <app-header [numberItems]="numberItems"></app-header>
+  <app-body [products]="products" (onRemoveProduct)="removeProduct($event)" (onChangeQty)="updateQuantity($event)"></app-body>
+  <app-footer [subTotal]="subTotal" [total]="total" [tax]="tax" [isDiscount]="isDiscount" (checkPromoCode)="checkPromoCode($event)" [valueDiscount]="valueDiscount"></app-footer>
+</main>

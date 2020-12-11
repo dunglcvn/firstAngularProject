@@ -1,0 +1,19 @@
+<section class="container">
+  <div class="promotion">
+    <label for="promo-code">Have A Promo Code?</label>
+    <input #promoCodeInputElement type="text" id="promo-code" value="" /> <button type="button" (click)="checksPromoCode(promoCodeInputElement)"></button>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li>Subtotal <span>{{ subTotal | currency }}</span></li>
+      <li *ngIf="isDiscount">Discount <span>{{ discount | currency }}</span></li>
+      <li>Tax <span>{{ tax.toFixed(3) | currency }}</span></li>
+      <li class="total">Total <span>{{ total | currency }}</span></li>
+    </ul>
+  </div>
+
+  <div class="checkout">
+    <button type="button">Check Out</button>
+  </div>
+</section>
